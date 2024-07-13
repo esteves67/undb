@@ -4,7 +4,7 @@ services:
   - type: web
     name: undb
     env: docker
-    repo: https://github.com/undb-xyz/undb.git
+    repo: https://github.com/esteves67/undb.git
     region: singapore
     plan: starter
     rootDir: .
@@ -12,7 +12,7 @@ services:
     healthCheckPath: /health
     envVars:
       - key: UNDB_HOST
-        value: https://demo.undb.xyz
+        value: https://localhost
       - key: PUBLIC_UNDB_ADMIN_EMAIL
         value: test@example.com
       - key: PUBLIC_UNDB_ADMIN_PASSWORD
@@ -20,8 +20,8 @@ services:
       - key: PUBLIC_UNDB_IS_DEMO
         value: 'true'
       - key: PUBLIC_UNDB_ANALYTICS_DOMAIN
-        value: demo.undb.xyz
+        value: localhost
       - key: UNDB_SEED
         value: 'true'
     domains:
-      - demo.undb.xyz
+      - localhost
